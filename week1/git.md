@@ -61,42 +61,57 @@ git config --global user.email "email@example.com"
 git init
 ```
 
-
 - Tracking Changes
 
 ```bash
-
+git status  // check status of file
+git add . // Adding files to the staging area:
 ```
 - Committing Changes
 
 ```bash
-git add .
-git commit -m "Your message goes here"
-
-
-
+git commit -m "Commit message" // Committing staged changes 
 ```
 - Branching and Merging
 
 **Branch**
 
+When we working on a new feature, we need to make sure our current version is not going to be affected, and our code will not break. So we have branching. To checkout to new branch we use a command:
 ```
+git branch branch-name // Creating a new branch
+git checkout branch-name // Switching branches 
 ```
 
+Merging is a way of putting a forked history back together again. The git merge command lets you take the independent lines of development created by git branch and integrate them into a single branch.
 
 **Merge Conflicts**
+When multiple developers push their code to the remote repo without pulling the most updated version we might have a merge conflict.
+In this case, we can resolve it using Bash. 
 
 ```bash
-
+git branch branch-name // Creating a new branch
+git checkout branch-name // Switching branches 
+git merge branch-name // Merging branches
 ```
 
 - Working with Remotes
 
 ```
+git clone <remote-url> // Cloning a remote repository
+git remote add origin <remote-url> // Adding a remote
 
 ```
 
 ### .gitignore 
+
+Used to specify files and directories that Git should ignore. When Git scans your working directory for changes to track, it looks at all files unless they are specified in .gitignore.
+
+* is used as a wildcard match.
+/ is used to ignore pathnames relative to the .gitignore file.
+# is used to add comments to a .gitignore file.
+** can be used to match any number of directories.
+! to negate a file that would be ignored.
+
 
 
 **Always make sure you don't track sensitive info**, such as connection strings, API keys, and others.
@@ -104,6 +119,12 @@ git commit -m "Your message goes here"
 Example of a typical workflow:
 
 ```bash
+git pull origin <branch-name> // get new updates from the remote repository
 
+After you made some changes, you can add it to staging area and commit
+
+git add .
+git commit -m "My first commit"
+git push origin <branch-name>
 
 ```
