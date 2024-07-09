@@ -2,21 +2,25 @@
 
 ### What is the VCS?
 
+It is software that helps manage changes to source code, documents, or any any set of files over time.
+
 #### Key aspects and benefits:
-
-
+- Tracking changes
+- Versioning
+- Collaboration
+- Back up and recovery
 ## Centralized and Desentrilized VCS
 
-**Centralized** 
+**Centralized** - central signle repo that stores all version all files
 
-**Decentralized / Distributed**
+**Decentralized / Distributed** - each dev
 
 ## GIT
 
-
-
 ### Three States
-
+- Modified (changed a file, not commited)
+- Staged (marked a modifed file in its current version)
+- Commited (data is safely stored in local database)
 
 ### Three Main Sections of a Git project
 
