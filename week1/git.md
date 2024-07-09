@@ -29,6 +29,9 @@
 - Initializing a Repository
 
 ```bash
+
+git init
+
 ```
 
 - Tracking Changes
