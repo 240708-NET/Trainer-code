@@ -106,11 +106,11 @@ git remote add origin <remote-url> // Adding a remote
 
 Used to specify files and directories that Git should ignore. When Git scans your working directory for changes to track, it looks at all files unless they are specified in .gitignore.
 
- "*" is used as a wildcard match.
-/ is used to ignore pathnames relative to the .gitignore file.
-"#" is used to add comments to a .gitignore file.
-** can be used to match any number of directories.
-! to negate a file that would be ignored.
+ - "*" is used as a wildcard match.
+- / is used to ignore pathnames relative to the .gitignore file.
+- "#" is used to add comments to a .gitignore file.
+- ** can be used to match any number of directories.
+- ! to negate a file that would be ignored.
 
 
 
