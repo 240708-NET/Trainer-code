@@ -1,19 +1,74 @@
-### Version Control Systems
+## Version Control Systems
+
+### What is the VCS?
+
+#### Key aspects and benefits:
 
 
-### Git 
+## Centralized and Desentrilized VCS
 
-### Basic Comands
+**Centralized** 
 
-- git clone
-- git checkout
-- git add .
-- git commit 
+**Decentralized / Distributed**
 
-etc
+## GIT
 
 
-### Decentralized and Centralized 
+
+### Three States
 
 
-### .gitingore
+### Three Main Sections of a Git project
+
+
+### Git workflow
+
+
+### Basic GIT Commands
+
+- Initializing a Repository
+
+```bash
+```
+
+- Tracking Changes
+
+```bash
+
+```
+- Committing Changes
+
+```bash
+
+```
+- Branching and Merging
+
+**Branch**
+
+```
+```
+
+
+**Merge Conflicts**
+
+```bash
+
+```
+
+- Working with Remotes
+
+```
+
+```
+
+### .gitignore 
+
+
+**Always make sure you don't track sensitive info**, such as connection strings, API keys, and others.
+
+Example of a typical workflow:
+
+```bash
+
+
+```
