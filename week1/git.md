@@ -30,7 +30,6 @@
 
 ```bash
 
-git init
 
 ```
 
