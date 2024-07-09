@@ -42,6 +42,10 @@ git init
 - Committing Changes
 
 ```bash
+git add .
+git commit -m "Your message goes here"
+
+
 
 ```
 - Branching and Merging
