@@ -1,8 +1,27 @@
 class Program
 {
+	// Fields
+
+	// Methods
+
 	static void Main( string[] args )
 	{
 		Console.WriteLine( "High/Low Running" );
+
+		// Singleton - you create a single instance of a thing that is referenced throughout the application to complete some functionality.
+		// create an instance of the Game class
+		Game newGame = new Game(); 
+
+
+		int roundCount = newGame.PlayGame();
+
+
+		
+		// newGame.guessString = "4";
+		// //newGame.set_guessString("4");
+		// newGame.roundCount = 2;
+
+/*
 
 	// In Softwre Development Life Cycle (SDLC) a user story is a way to track a feature
 
@@ -54,6 +73,7 @@ class Program
 				Console.WriteLine( "Oops, too low!" );
 			}
 		} while ( guessNumber != targetNumber );
+*/
 		Console.WriteLine( "Thanks for playing!" );
 		Console.WriteLine( "You took {0} rounds to guess the answer!", roundCount );
 	}	
