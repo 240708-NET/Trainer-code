@@ -1,4 +1,0 @@
-purple 100
-green 30
-blue 75
-brown 90
