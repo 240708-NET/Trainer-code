@@ -16,6 +16,12 @@ namespace FileIO
             {
                 File.WriteAllText( path, text );
             }
+            else
+            {
+               text = File.ReadAllText( path );
+            }
+
+            Console.WriteLine( text );
         }
     }
 }
