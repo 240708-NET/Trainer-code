@@ -1,1 +1,2 @@
-[{"ID":0,"color":"red","numFeathers":20},{"ID":1,"color":"green","numFeathers":50},{"ID":2,"color":"black","numFeathers":120},{"ID":3,"color":"pink","numFeathers":30}]
+0 red 20
+1 green 50

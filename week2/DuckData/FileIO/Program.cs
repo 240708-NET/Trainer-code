@@ -10,50 +10,57 @@ namespace FileIO
         public static void Main(string[] args)
         {
             Console.WriteLine("Hello Again!");
-            string path = @"./Ducks.txt";
 
-            //IRepository file = new FileReadWrite();
-            IRepository file = new Serialization();
-
-            // file.ReadAndWriteWithFile(path);          
-
-            // Console.WriteLine();
-            // file.StreamReaderReadLine(path);
-
-            // Console.WriteLine();
-            // file.StreamReaderReadToEnd(path);
+            // IRepository file = new FileReadWrite( "./Ducks.txt" );
+            // IRepository file = new Serialization( "./SerializedDucks.txt" );
 
             List<Duck> duckList = new List<Duck>();
             Duck myDuck = new Duck( "red" , 20 );
-
             // duckList.Add(myDuck);
             // duckList.Add(new Duck( "green", 50));
             // duckList.Add(new Duck( "black", 120));
 
-            //file.SaveDuck(myDuck, path);
-            //file.SaveAllDucks(duckList, path);
+            // file.ReadAndWriteWithFile();          
+            // file.StreamReaderReadLine();
+            // file.StreamReaderReadToEnd();
 
+            // List<Duck> duckList = file.ReadDucksFromFile(); 
+            // file.SaveDuck(myDuck);
+            // file.SaveAllDucks(duckList);
 
-            Console.WriteLine("\n");
-            //Duck myDuck = new Duck( "purple", 100 );
-            //myDuck.Quack();
-            //Console.WriteLine( myDuck.ToString() );
+            try
+            {
+                myDuck = file.GetDuckById( 2 );
+            }
+            catch( Exception e )
+            {
+                Console.WriteLine( e.Message );
+            }
 
-            path = @"./Ducks.txt";
-            //File.WriteAllText( path, myDuck.ToString() );
-            // string ducks = File.ReadAllText(path);
-            // Console.WriteLine(ducks);
-            //string[] duckVals = ducks.Split(' ');
-            //Duck mySavedDuck = new Duck( duckVals[0], int.Parse(duckVals[1]) );
-            //mySavedDuck.Quack();
+            duckList = file.LoadAllDucks();
 
-            //List<Duck> duckList = file.ReadDucksFromFile(path) ; 
-
-            duckList = file.LoadAllDucks(path);
             foreach(Duck d in duckList)
             {
                 d.Quack();
             }
+
+            try 
+            {
+                file.DeleteDuckById( 2 );
+            }
+            catch( Exception e )
+            {
+                Console.WriteLine( e.Message );
+            }
+
+
+            duckList = file.LoadAllDucks();
+            foreach(Duck d in duckList)
+            {
+                d.Quack();
+            }
+
+
         }
     }
 }

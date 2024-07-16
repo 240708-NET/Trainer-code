@@ -8,12 +8,14 @@ namespace DuckData.Repo
     // "we" (the class that extends this interface) are agreeing to use all of the methods that are laid out in the interface
     public interface IRepository
     {
-        public void ReadAndWriteWithFile(string path);
-        public void StreamReaderReadLine(string path);
-        public void StreamReaderReadToEnd(string path);
-        public List<Duck> ReadDucksFromFile(string path);
-        void SaveDuck(Duck myDuck, string path);
-        void SaveAllDucks(List<Duck> duckList, string path);
-        List<Duck> LoadAllDucks (string path);
+        // public void ReadAndWriteWithFile();
+        // public void StreamReaderReadLine();
+        // public void StreamReaderReadToEnd();
+        // public List<Duck> ReadDucksFromFile();
+        void SaveDuck(Duck myDuck);
+        void SaveAllDucks(List<Duck> duckList);
+        List<Duck> LoadAllDucks ();
+        Duck GetDuckById ( int id );
+        void DeleteDuckById ( int id );
     }
 }
