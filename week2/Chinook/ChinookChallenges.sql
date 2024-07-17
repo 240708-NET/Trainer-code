@@ -3,7 +3,7 @@
 -- BASIC CHALLENGES
 -- List all customers (full name, customer id, and country) who are not in the USA
 SELECT firstName, lastName As fullName, customerId, country FROM [MyDatabase].[dbo].[customer] 
-WHERE Country !USA!!= 'USA'; 
+WHERE Country != 'USA'; 
 
 SELECT FirstName + ' ' + LastName AS CustomerName, CustomerId, Country 
     FROM [MyDatabase].[dbo].[Customer]
@@ -13,8 +13,6 @@ SELECT FirstName + ' ' + LastName AS CustomerName, CustomerId, Country
 SELECT FirstName + ' ' + LastName AS FullName, CustomerId, Country
     FROM [MyDatabase].[dbo].[Customer]
     WHERE Country = 'Brazil'; -- Jean-Luc :)
-
-    SELECT * From [MyDatabase].[dbo].[Customer] WHERE country
     
 -- List all sales agents
  SELECT * FROM [MyDatabase].[dbo].[Employee] WHERE Title LIKE '%Agent';
@@ -43,8 +41,6 @@ SELECT YEAR(InvoiceDate) AS Year, COUNT(InvoiceId) AS InvoiceCount, SUM(Total) A
     ORDER BY (Year); -- Jean-Luc :)
 
 -- how many line items were there for invoice #37
-SELECT Count(*) FROM [MyDatabase].[dbo].[Customer] WHERE InvoiceId = 37;
-
 SELECT * FROM [MyDatabase].[dbo].[InvoiceLine] WHERE InvoiceId = 37;
 
 SELECT COUNT(*)
