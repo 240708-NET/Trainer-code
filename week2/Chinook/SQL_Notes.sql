@@ -13,7 +13,7 @@ see?
 
 -- DQL - 
 --  SELECT - sorting, filtering, and gathering data from tables within the database - Select ALWAYS returns tables
-
+CREATE DATABASE MyDatabase;
 USE MyDatabase;
 GO
 
@@ -80,3 +80,22 @@ Logical order of operations:
 - SELECT
 - ORDER BY
 */
+
+
+-- JOIN
+
+-- INNER, OUTER, LEFT, RIGHT, CROSS
+-- Maybe good to visualize as Venn Diagrams
+
+-- JOIN will hilight the importance of NULL in SQL
+-- JOIN - combining entries/records of multiple tables to gather fields from the different entries into one result
+-- INNER JOIN - returns the overlapping fields/results from tables
+-- OUTER JOIN - 
+-- LEFT JOIN - 
+-- RIGHT JOIN - 
+-- CROSS JOIN - 
+-- SELF JOIN - 
+
+-- KEYS
+-- Primary Key - a NOT NULL, UNIQUE identifier for the entry of the table that other tables can reference
+-- Foreign Key - a field owned by an entry/another row that references the primary key of an entry 
