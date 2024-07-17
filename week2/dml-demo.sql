@@ -37,6 +37,20 @@ ADD demo_description VARCHAR (255) NOT NULL;
 
 EXEC sp_rename 'dbo.DemoTable.new_column_name', 'demo_descr', 'COLUMN';
 
+-- ALTER TABLE
+
+ALTER TABLE DemoTable
+ADD demo_description varchar(250);
+
+    
+ALTER TABLE DemoTable
+ALTER COLUMN demo_name VARCHAR(100);
+
+ALTER TABLE Employees
+DROP COLUMN demo_description;
+
+
+
 -- Data manipulation languages
 
 -- Insert Values
