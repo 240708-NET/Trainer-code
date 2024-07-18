@@ -202,7 +202,7 @@ CREATE TABLE Product (
 
 ### DML Language
 
-Data Modification Language is the SQL language subset used for modifying data in the database.
+Data Manipulation Language (DML) is the SQL language subset used for modifying data in the database.
 
 ```
 INSERT
