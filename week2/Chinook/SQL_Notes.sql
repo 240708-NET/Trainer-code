@@ -79,23 +79,44 @@ Logical order of operations:
 - HAVING
 - SELECT
 - ORDER BY
+
+ JOINS (Maybe good to visualize as Venn Diagrams)
+
+******* JOIN will hilight the importance of NULL in SQL **********
+
+JOIN - combining entries/records of multiple tables to gather fields from the different entries into one resultant table 
+INNER JOIN -
+    The INNER JOIN keyword returns only rows with a match in both tables.
+    Returns the overlapping fields/results from tables where the foreign and primary keys match.
+    Any entry from a table with no matching foreign key will not be returned.
+
+LEFT JOIN - 
+    The LEFT JOIN keyword returns all records from the "LEFT" table in the command,
+    even if there are no matches in the "RIGHT" table.
+
+RIGHT JOIN - 
+    The RIGHT JOIN keyword returns all records from the "RIGHT" table in the command,
+    even if there are no matches in the "LEFT" table.
+
+OUTER JOIN - 
+    The FULL OUTER JOIN keyword returns all matching records from both tables whether the other table matches or not.
+    So, if there are rows in "A" that do not have matches in "B",
+    or if there are rows in "B" that do not have matches in "A", those rows will be listed as well.
+
+CROSS JOIN - 
+    CROSS JOIN returns a combination of each row in the left table paired with each row in the right table. 
+    If table A is the four suits, and table B is the face value of the cards,
+    a CROSS JOIN is the full deck of cards where for every suit there is a card of each value.
+
+SELF JOIN - 
+    Joins in SQL, a self join is a regular join that is used to join a table with itself.
+    It allows us to combine the rows from the same table based on some specific conditions.
+    It allows us to retrieve data or information which involves comparing records within the same table.
+
+KEYS -
+Primary Key 
+    - A NOT NULL, UNIQUE identifier for the entry of the table that other tables can reference
+Foreign Key
+    - A field owned by an entry/another row that references the primary key of an entry 
+
 */
-
-
--- JOIN
-
--- INNER, OUTER, LEFT, RIGHT, CROSS
--- Maybe good to visualize as Venn Diagrams
-
--- JOIN will hilight the importance of NULL in SQL
--- JOIN - combining entries/records of multiple tables to gather fields from the different entries into one result
--- INNER JOIN - returns the overlapping fields/results from tables
--- OUTER JOIN - 
--- LEFT JOIN - 
--- RIGHT JOIN - 
--- CROSS JOIN - 
--- SELF JOIN - 
-
--- KEYS
--- Primary Key - a NOT NULL, UNIQUE identifier for the entry of the table that other tables can reference
--- Foreign Key - a field owned by an entry/another row that references the primary key of an entry 
