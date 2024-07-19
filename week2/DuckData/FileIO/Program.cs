@@ -7,12 +7,16 @@ namespace FileIO
 {
     class Program
     {
+
+
         public static void Main(string[] args)
         {
+            string connectionstring = "";
             Console.WriteLine("Hello Again!");
 
             // IRepository file = new FileReadWrite( "./Ducks.txt" );
             // IRepository file = new Serialization( "./SerializedDucks.txt" );
+            IRepository file = new EFCore(connectionstring);
 
             List<Duck> duckList = new List<Duck>();
             Duck myDuck = new Duck( "red" , 20 );
