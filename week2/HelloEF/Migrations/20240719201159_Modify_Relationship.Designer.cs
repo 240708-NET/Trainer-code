@@ -4,6 +4,7 @@ using HelloEF;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HelloEF.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240719201159_Modify_Relationship")]
+    partial class Modify_Relationship
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,42 +58,33 @@ namespace HelloEF.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("PetOwnerId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Species")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("PetOwnerId");
+
                     b.ToTable("Pets");
                 });
 
-            modelBuilder.Entity("OwnerPet", b =>
+            modelBuilder.Entity("HelloEF.Pet", b =>
                 {
-                    b.Property<int>("OwnersId")
-                        .HasColumnType("int");
+                    b.HasOne("HelloEF.Owner", "PetOwner")
+                        .WithMany("OwnerPet")
+                        .HasForeignKey("PetOwnerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Property<int>("PetsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("OwnersId", "PetsId");
-
-                    b.HasIndex("PetsId");
-
-                    b.ToTable("OwnerPet");
+                    b.Navigation("PetOwner");
                 });
 
-            modelBuilder.Entity("OwnerPet", b =>
+            modelBuilder.Entity("HelloEF.Owner", b =>
                 {
-                    b.HasOne("HelloEF.Owner", null)
-                        .WithMany()
-                        .HasForeignKey("OwnersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("HelloEF.Pet", null)
-                        .WithMany()
-                        .HasForeignKey("PetsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("OwnerPet");
                 });
 #pragma warning restore 612, 618
         }
