@@ -111,26 +111,44 @@ Creating and exposing RESTful APIs involves designing endpoints that allow clien
 - **Implement Business Logic** (create controllers, handleers that handle incoing requests and generate responses)
 - **Implement Error Handling** (Establish clear guidelines for error responses using appropriate HTTP status codes (e.g., 400 for client errors, 500 for server errors).)
 - **Document Your API** (Use tools like Swagger/OpenAPI to automatically generate comprehensive documentation for your API.)
+## HTTP Request Life Cycle
 
-### REST lifecycle
+1. **DNS Resolution**:
+   - The client initiates a request to a domain name (e.g., www.example.com).
+   - The domain name is resolved to an IP address through DNS (Domain Name System) lookup.
 
-The REST (Representational State Transfer) lifecycle refers to the sequence of steps or phases involved in the creation, utilization, and potential termination of resources in a RESTful architecture. 
+2. **Connection Establishment**:
+   - The client establishes a TCP (Transmission Control Protocol) connection with the server at the resolved IP address.
+   - This involves a three-way handshake to set up the connection.
 
-1. Define
+3. **HTTP Request**:
+   - Once the connection is established, the client sends an HTTP request to the server.
+   - The request consists of:
+     - **Request Line**: Specifies the HTTP method (GET, POST, PUT, DELETE), the URI (Uniform Resource Identifier) of the resource, and the HTTP version.
+     - **Headers**: Additional metadata sent with the request, including `Host`, `User-Agent`, `Content-Type`, `Accept`, etc.
+     - **Body** (Optional): Data sent to the server, typically with methods like POST or PUT.
 
-2. Design
+4. **Server Processing**:
+   - The server receives the request and processes it according to the specified HTTP method and URI.
+   - It performs any necessary operations, such as retrieving data from a database, processing business logic, or generating a response dynamically.
 
-3. Develop
+5. **HTTP Response**:
+   - After processing the request, the server generates an HTTP response.
+   - The response includes:
+     - **Status Line**: Indicates the HTTP version, status code (e.g., 200 OK, 404 Not Found), and a reason phrase.
+     - **Headers**: Additional metadata about the response, such as `Content-Type`, `Content-Length`, `Cache-Control`, etc.
+     - **Body**: Optional data returned by the server, such as HTML content, JSON data, or binary data.
 
-4. Test
+6. **Data Transfer**:
+   - The server sends the HTTP response back to the client over the established TCP connection.
+   - Data transfer occurs in the form of packets through the network infrastructure.
 
-5. Secure
+7. **Connection Termination**:
+   - Once the response is fully transmitted, the server closes the TCP connection (unless kept alive for subsequent requests).
+   - The client receives the entire response and processes the data as needed.
 
-6. Deploy
+This cycle repeats for each HTTP request-response interaction between the client and the server. Understanding this life cycle helps in troubleshooting network issues, optimizing performance, and designing efficient web applications and APIs.
 
-7. Observe
-
-Link: https://www.postman.com/api-platform/api-lifecycle/
 
 **RESTFUL API lifecycle by IBM:**
 - API Requirement Definition
