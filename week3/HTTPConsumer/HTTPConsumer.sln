@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTTPConsumer.Con", "HTTPConsumer.Con\HTTPConsumer.Con.csproj", "{AF947C34-0CC7-468B-B5CF-A04CB13F0D8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTTPConsumer.Models", "HTTPConsumer.Models\HTTPConsumer.Models.csproj", "{7D5FDFD1-387B-41F2-AB04-E9CCC832BF57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF947C34-0CC7-468B-B5CF-A04CB13F0D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF947C34-0CC7-468B-B5CF-A04CB13F0D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF947C34-0CC7-468B-B5CF-A04CB13F0D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF947C34-0CC7-468B-B5CF-A04CB13F0D8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D5FDFD1-387B-41F2-AB04-E9CCC832BF57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D5FDFD1-387B-41F2-AB04-E9CCC832BF57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D5FDFD1-387B-41F2-AB04-E9CCC832BF57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D5FDFD1-387B-41F2-AB04-E9CCC832BF57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
