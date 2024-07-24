@@ -9,7 +9,7 @@ namespace DuckData.Repo
         static readonly string connectionstring = "";
         static DuckContext context;
 
-        public EFCore( string CS )
+        public EFCore( string SC )
         {
             DbContextOptions<DuckContext> options;
             options = new DbContextOptionsBuilder<DuckContext>()
