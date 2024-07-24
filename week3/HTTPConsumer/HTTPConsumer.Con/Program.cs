@@ -13,6 +13,7 @@ namespace HTTPConsumer.Con
             Console.WriteLine( "Http Client is starting..." );
 
             string uri = "https://jsonplaceholder.typicode.com/posts/";
+            uri = "http://localhost:5250/weatherforecast";
 
             HttpClient client = new HttpClient();
 
@@ -20,10 +21,14 @@ namespace HTTPConsumer.Con
 
             // Console.WriteLine( response );
 
-            List<Post> postList = JsonSerializer.Deserialize<List<Post>>(response);
+            // List<Post> postList = JsonSerializer.Deserialize<List<Post>>(response);
+            List<Forecast> forecastList = JsonSerializer.Deserialize<List<Forecast>>(response);
 
-            foreach ( var i in postList )
-                Console.WriteLine( i.id + ": " + i.title );
+            // foreach ( var i in postList )
+            //     Console.WriteLine( i.id + ": " + i.title );
+
+            foreach (var f in forecastList )
+                Console.WriteLine(f.temperatureF);
 
         }
     }

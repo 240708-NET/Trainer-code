@@ -1,4 +1,3 @@
-
 namespace MyAPI.API;
 
 public class Program

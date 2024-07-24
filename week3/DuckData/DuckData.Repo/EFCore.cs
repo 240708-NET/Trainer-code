@@ -6,16 +6,17 @@ namespace DuckData.Repo
 {
     public class EFCore : IRepository
     {
-        static readonly string connectionstring = "";
-        static DuckContext context;
+        DuckContext context;
 
-        public EFCore( string CS )
+        public EFCore()
         {
-            DbContextOptions<DuckContext> options;
-            options = new DbContextOptionsBuilder<DuckContext>()
-                .UseSqlServer(connectionstring)
-                .Options;
-            context = new DuckContext(options);
+            // DbContextOptions<DuckContext> options;
+            // options = new DbContextOptionsBuilder<DuckContext>()
+            //     .UseSqlServer(connectionstring)
+            //     .Options;
+            // context = new DuckContext(options);
+
+            context = new DuckContext();
         }
 
         public void SaveDuck(Duck myDuck)
@@ -29,13 +30,13 @@ namespace DuckData.Repo
             foreach (Duck d in duckList)
             {
                 context.Ducks.Add(d);
+                context.SaveChanges();
             }
-            context.SaveChanges();
         }
 
         public List<Duck> LoadAllDucks ()
         {
-            return context.Ducks.ToList();;
+            return context.Ducks.ToList();
         }
 
         public Duck GetDuckById ( int id )
@@ -48,6 +49,7 @@ namespace DuckData.Repo
         {
             Duck foundDuck = context.Ducks.Find(id);
             context.Ducks.Remove(foundDuck);
+            context.SaveChanges();
         }
     }
 }
