@@ -12,7 +12,7 @@ namespace DuckData.Repo
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string ConnectionString = "";
+            string ConnectionString = File.ReadAllText("./..connectionstring");
             optionsBuilder.UseSqlServer(ConnectionString);
         }
     }

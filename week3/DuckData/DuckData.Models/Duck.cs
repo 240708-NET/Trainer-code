@@ -3,6 +3,7 @@ namespace DuckData.Models
     public class Duck
     {
         // Fields
+        [Key]
         public int ID { get; set; }
         public string color { get; set; }
         public int numFeathers { get; set; } 
