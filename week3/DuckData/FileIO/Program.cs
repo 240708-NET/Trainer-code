@@ -9,7 +9,7 @@ namespace FileIO
     {
         public static void Main(string[] args)
         {
-            string connectionstring = File.ReadAllText("./../connectionstring");
+            //string connectionstring = File.ReadAllText(@".\..\connectionstring");
             Console.WriteLine("Hello Again!");
 
             // IRepository file = new FileReadWrite( "./Ducks.txt" );
