@@ -1,3 +1,5 @@
+using DuckData.Repo;
+
 namespace MyAPI.API;
 
 public class Program
@@ -12,6 +14,8 @@ public class Program
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
+        builder.Services.AddScoped<IRepository>( repo => new EFCore( builder.Configuration.GetConnectionString( "Ducks" ) ) );
+        //builder.Services.AddSingleton<T>();
 
         var app = builder.Build();
 

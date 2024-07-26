@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAPI.API", "MyAPI.API\MyAPI.API.csproj", "{EC3C1136-F506-448B-A1CC-81CE3B45F1F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuckData.Repo", "DuckData.Repo\DuckData.Repo.csproj", "{FD01D821-E0BF-42FB-B010-CBABE854C335}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuckData.Models", "DuckData.Models\DuckData.Models.csproj", "{6F28A39B-18BC-4313-9F18-CD36157FCCA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,5 +30,13 @@ Global
 		{E0D9D860-1ED6-41ED-BC7F-9D402F9278D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0D9D860-1ED6-41ED-BC7F-9D402F9278D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0D9D860-1ED6-41ED-BC7F-9D402F9278D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD01D821-E0BF-42FB-B010-CBABE854C335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD01D821-E0BF-42FB-B010-CBABE854C335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD01D821-E0BF-42FB-B010-CBABE854C335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD01D821-E0BF-42FB-B010-CBABE854C335}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F28A39B-18BC-4313-9F18-CD36157FCCA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F28A39B-18BC-4313-9F18-CD36157FCCA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F28A39B-18BC-4313-9F18-CD36157FCCA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F28A39B-18BC-4313-9F18-CD36157FCCA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
