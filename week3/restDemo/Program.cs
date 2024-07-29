@@ -44,6 +44,8 @@ app.MapPatch("/users/Rename/{id}", (int id) => {
 
 });
 
+
+
 // Delete user
 app.MapDelete("/users/DeleteUser/{id}", (int id) => {
     var user = users.FirstOrDefault(user => user.Id == id);
