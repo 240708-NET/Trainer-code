@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./form-style.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <nav>
+            
+            <img src="./assets/cat-4218424_640.jpg">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id = "home">
+        <h1>Welcome to our website!</h1>
+        <form>
+            <label for="login">Login</label>
+            <input type="text" placeholder="Type your login.." name = "login" id = "login" required />
+            <label for="password">Password</label>
+            <input type="password" placeholder="Your password..." name="password" id = "password" required />
+
+            <label for="login">Age</label>
+            <input type="number" placeholder="Your age" name = "age" id = "age" min="18" required />
+
+            <label>Your pet type:</label>
+            <div id="radio-button-container">
+                <div class="radio-button-inner-container">
+                    <input type="radio" id="dog" name="pets" value="Dog">
+                    <label for="dog">Dog</label>
+                </div>
+                <div class="radio-button-inner-container">
+                    <input type="radio" id="cat" name="pets" value="cat">
+                    <label for="cat">Cat</label>
+                </div>
+             
+    
+               
+            </div>
+          
+            <div id="selection_container">
+                <label>Select your country</label>
+                <select name="countries">
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Mexico">Mexico</option>
+                </select>
+            </div>
+
+
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,111 @@
+@media screen and (max-width:1000px){
+
+    header{
+        background-color: rgb(0, 242, 93);
+    }
+    
+    /*Practice*/
+    #box-modex-css div{
+        display: flex;
+        border: 2px solid rgb(47, 241, 95);
+        align-items:flex-end;
+        width:50%;
+        margin: auto;
+        justify-content: center;
+    }
+    
+    #box-modex-css p{
+    
+        margin:15px;
+        padding:10px;
+        border:2px solid red;
+        width: 100px;
+        height: 300px;
+    }
+
+    #box-modex-css h1{
+        border:2px solid rgb(234, 45, 164);
+    
+    }
+    
+     span{
+        border:2px solid rgb(17, 203, 255);
+        background-color: aquamarine;
+    
+    }
+    
+    
+    .pseudo-elements-css{
+    
+        background-color: chocolate;
+        transition: 2s all;
+    
+    }
+
+
+    /*This one change color */
+
+    .pseudo-elements-css:hover{
+        background-color: rgb(225, 253, 17);
+    
+    }
+    
+
+    .pseudo-elements-css::before{
+     content: "THIS IS GOING TO BE BEFORE SECTION ";
+       background-color: black;
+    }
+
+    .pseudo-elements-css::after{
+        content: "THIS IS GOING TO BE BEFORE SECTION ";
+          background-color: rgb(236, 49, 49);
+       }
+}
+
+
+#absolute-positon{
+    border: 1px solid black;
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    background-color: coral;
+    z-index:2;
+}
+
+#fixed-positon{
+    position: fixed;
+    width: 100%;
+    background-color: lightblue;
+    z-index:3;
+
+}
+
+#sticky-positon{
+
+    position: sticky;
+    background-color: blueviolet;
+    z-index: 1;
+    height: 150px;
+}
+
+/*
+
+#grid-demo{
+    display: grid;
+    background-color: cadetblue;
+    grid-template-columns: 100px 100px 300px;
+    grid-gap: 30px;
+    width: 1000px;
+    margin: auto;
+}
+
+#grid-demo div{
+border:2px solid red;
+}
+
+#grid-row{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/*

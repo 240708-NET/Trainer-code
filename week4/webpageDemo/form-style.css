@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.676),rgba(0, 0, 0, 0.685)),url('./assets/cat-4218424_640.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav{
+    display: flex;
+    justify-content:space-between;
+    width:1200px;
+    margin: 2em auto 0;
+}
+
+
+nav img{
+    width:60px;
+    height: 60px;
+    border-radius: 200px;
+    object-fit:cover;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+#home form{
+    width:400px;
+    background-color: rgba(205, 199, 192, 0.546);
+    border-radius: 20px;
+    margin: 2em auto 2em auto;
+    padding: 30px 20px;
+
+}
+
+form input{
+    display:block;
+}
+
+form label{
+   
+    display: block;
+    width:210px;
+    margin: 5px auto 10px;
+
+}
+
+form input[type="text"], 
+form input[type="password"],
+form input[type="number"]
+{
+    padding: 10px 20px;
+    margin: auto;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+}
+
+
+form input[type="submit"]{
+    background-color: purple;
+    padding: 10px 20px;
+    margin: 2em auto 0;
+    color: white;
+}
+
+
+
+h1{
+    text-align: center;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+#radio-button-container{
+    display: flex;
+    width:220px;
+    margin: 10px auto;
+}
+
+.radio-button-inner-container{
+    display: flex;
+    width:50%;
+    gap: 5px;
+
+}
+
+#selection_container select{
+    margin-left: 22%;
+    padding: 5px;
+}
