@@ -1,0 +1,7 @@
+.selectedBtn{
+    background-color: #86B380;
+}
+
+#SubmitBtn{
+transition: background-color 1s;
+}
