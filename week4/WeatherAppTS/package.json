@@ -1,0 +1,13 @@
+{
+  "name": "weatherappts",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "dev":"next dev",
+    "build":"next build",
+    "start":"next start"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
