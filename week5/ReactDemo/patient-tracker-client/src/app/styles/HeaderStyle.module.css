@@ -1,0 +1,31 @@
+
+#header{
+    background-color: rgb(248, 127, 21);
+    display: flex;
+    color:white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header ul{
+    display: flex;
+    gap:50px;
+}
+
+.li{
+    color: white ;
+    list-style-type: none;
+}
+
+#header button{
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    width:100px;
+    display: block;
+}
+  
+#userDataContainer{
+    margin-left: 40px;
+}
