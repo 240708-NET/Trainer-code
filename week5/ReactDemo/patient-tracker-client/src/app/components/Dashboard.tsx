@@ -1,5 +1,8 @@
+import UserContext from "../UserContext";
+import { useContext } from "react";
+export const Dashboard = () => {
 
-export const Dashboard = ({username} : {username:string}) => {
+    const { username } = useContext(UserContext);
 
     return (
         <div>
