@@ -2,29 +2,27 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { Header } from "./components/Header";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { LoginForm } from "./components/LoginForm";
 import { Dashboard } from "./components/Dashboard";
+import UserContext from "./UserContext";
 
 export default function Home() {
 
-  const [currentUserName, setcurrentUserName] = useState("Vlada");
+  const { username, setUsername } = useContext(UserContext);
 
-
-  const handleLogin = () => {
-    setcurrentUserName("Vlada")
-  }
+  //const [currentUserName, setcurrentUserName] = useState("Vlada");
 
   const handleLogout = () => {
-    setcurrentUserName("User")
+    setUsername("User")
   }
 
   return (
     <>
-        <Header username={currentUserName} onLogout={handleLogout} onLogin = {handleLogin}></Header>
+        <Header onLogout={handleLogout}></Header>
         
         {
-          currentUserName === "User" ? <LoginForm></LoginForm> : <Dashboard username={currentUserName}></Dashboard>
+          username === "User" ? <LoginForm></LoginForm> : <Dashboard ></Dashboard>
         }
         
     </>

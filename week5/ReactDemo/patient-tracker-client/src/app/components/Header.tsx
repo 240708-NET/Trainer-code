@@ -1,34 +1,32 @@
 'use client';
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import UserContext from "../UserContext";
 import { UserData } from "./UserData"
 import HeaderStyle from '../styles/HeaderStyle.module.css';
 
 interface HeaderProps{
-    username: string; 
     onLogout: () => void;
-    onLogin: () => void;
 }
 
 export const Header:React.FC<HeaderProps> = (props) => {
 
-    const [isUserLogged, setUserLoginStatus] = useState(true);
 
-    const handleUserLoging = () =>{
+    const {username, setUsername} = useContext(UserContext);
+    const [isUserLogged, setUserLoginStatus] = useState(username != "User");
 
-        if(isUserLogged){
-            setUserLoginStatus(false);
-            props.onLogout();
-            
-        }
-        else{
-            setUserLoginStatus(true);
-            props.onLogin();
-        }
+    
+    useEffect(() => {
+        setUserLoginStatus(username !== "User");
+    }, [username])
+    
+
+    const onLogout = () =>{
+        setUsername("User");
+        setUserLoginStatus(false);
     }
-
     return(
         <header id={HeaderStyle.header}>
-            <UserData username ={props.username}></UserData>
+            <UserData></UserData>
             <nav>
                 <ul>
                     <li className={HeaderStyle.li}>Home</li>
@@ -36,8 +34,14 @@ export const Header:React.FC<HeaderProps> = (props) => {
                     <li className={HeaderStyle.li}>Contacts</li>
                 </ul>
             </nav>
-            
-            <button onClick={handleUserLoging}>{isUserLogged ? "Logout": "Login"}</button>
+                    { //Conditional rendering
+                        isUserLogged && (
+                            <button onClick={onLogout}>Logout</button>)                  
+                    }
+
         </header>
+                
+
     )
+    
 }
