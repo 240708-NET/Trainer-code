@@ -1,0 +1,219 @@
+# .NET Core and .NET Framework
+bin/
+obj/
+debug/
+release/
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of the .nuget packages used
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+# NuGet v3's project.json files produces more ignoreable files
+*.nuget.props
+*.nuget.targets
+
+# VS Code
+.vscode/
+.vscode/**
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono auto generated files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Rider User preferences
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+.idea/markdown-navigator.xml
+.idea/markdown-navigator/profiles_settings.xml
+.idea/markdown-navigator/profiles_settings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/todo.xml
+
+# Rider Cache Directory
+.idea/.idea_modules/
+.idea/workspace.xml
+.idea/modules.xml
+.idea/libraries
+.idea/misc.xml
+.idea/dictionaries
+.idea/compiler.xml
+.idea/jarRepositories.xml
+.idea/copyright/
+.idea/inspectionProfiles/
+.idea/methodCache/
+.idea/shelf/
+.idea/tasks/
+.idea/scopes/
+
+# Windows error reporting
+*.wer
+
+# Windows Explorer folder settings
+Desktop.ini
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# VS for Mac
+.vscode/
+.vscode/**
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono auto generated files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Windows shortcuts
+*.lnk
+
+# Rider settings
+.idea/
+.idea/**
+
+# Rider workspace
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+.idea/markdown-navigator.xml
+.idea/markdown-navigator/profiles_settings.xml
+.idea/markdown-navigator/profiles_settings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/todo.xml
+
+# Rider cache
+.idea/.idea_modules/
+.idea/workspace.xml
+.idea/modules.xml
+.idea/libraries
+.idea/misc.xml
+.idea/dictionaries
+.idea/compiler.xml
+.idea/jarRepositories.xml
+.idea/copyright/
+.idea/inspectionProfiles/
+.idea/methodCache/
+.idea/shelf/
+.idea/tasks/
+.idea/scopes/
+
+# Windows error reporting
+*.wer
+
+# Windows Explorer folder settings
+Desktop.ini
+
+# Rider settings
+.idea/
+.idea/**
+
+# Rider workspace
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+.idea/markdown-navigator.xml
+.idea/markdown-navigator/profiles_settings.xml
+.idea/markdown-navigator/profiles_settings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/todo.xml
+
+# Rider cache
+.idea/.idea_modules/
+.idea/workspace.xml
+.idea/modules.xml
+.idea/libraries
+.idea/misc.xml
+.idea/dictionaries
+.idea/compiler.xml
+.idea/jarRepositories.xml
+.idea/copyright/
+.idea/inspectionProfiles/
+.idea/methodCache/
+.idea/shelf/
+.idea/tasks/
+.idea/scopes/
+
+# Local History for JetBrains IDEs
+.idea/LocalHistory/
+
+# Rider configuration
+.idea/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Windows shortcuts
+*.lnk
