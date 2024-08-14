@@ -3,7 +3,8 @@
 ##
 ## Get latest from `dotnet new gitignore`
 
-
+*.angular
+*.vscode
 *connectionstring*
 # dotenv files
 .env
