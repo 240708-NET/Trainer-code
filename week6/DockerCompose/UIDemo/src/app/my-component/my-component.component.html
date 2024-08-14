@@ -1,0 +1,12 @@
+<h1>App is ALIVE!!!</h1>
+<h3>Current count is: {{ count }}</h3>
+
+<button (click)="displayPosts()">Display Posts</button>
+<button (click)="displayTime()">Display Time</button>
+<button (click)="checkCount()">Check Count</button>
+
+<ul>
+    <li *ngIf="result != null"> {{ result }} </li>
+    <li *ngFor="let post of posts"> {{ post.id }} {{ post.title }} </li>
+
+</ul>
