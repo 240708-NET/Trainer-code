@@ -12,7 +12,7 @@ using patientTracker.Data;
 namespace patientTracker.Migrations
 {
     [DbContext(typeof(PatientTrackerContext))]
-    [Migration("20240805013853_Initial")]
+    [Migration("20240819213644_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -159,11 +159,11 @@ namespace patientTracker.Migrations
                 {
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValueSql("NEXT VALUE FOR userIdIncrement");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
 
                     b.Property<DateTime>("DateCreated")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Password")
@@ -180,16 +180,6 @@ namespace patientTracker.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = 1000,
-                            DateCreated = new DateTime(2024, 8, 5, 1, 38, 52, 927, DateTimeKind.Utc).AddTicks(2092),
-                            Password = "administrator24!",
-                            RoleId = 3,
-                            Username = "administrator"
-                        });
                 });
 
             modelBuilder.Entity("patientTracker.Models.Doctor", b =>

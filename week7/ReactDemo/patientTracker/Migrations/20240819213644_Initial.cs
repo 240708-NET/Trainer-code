@@ -47,7 +47,8 @@ namespace patientTracker.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    UserId = table.Column<int>(type: "int", nullable: false, defaultValueSql: "NEXT VALUE FOR userIdIncrement"),
+                    UserId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RoleId = table.Column<int>(type: "int", nullable: false),
@@ -119,11 +120,6 @@ namespace patientTracker.Migrations
                     { 2, 2, "Doctor" },
                     { 3, 1, "Patient" }
                 });
-
-            migrationBuilder.InsertData(
-                table: "Users",
-                columns: new[] { "UserId", "DateCreated", "Password", "RoleId", "Username" },
-                values: new object[] { 1000, new DateTime(2024, 8, 5, 1, 38, 52, 927, DateTimeKind.Utc).AddTicks(2092), "administrator24!", 3, "administrator" });
         }
 
         /// <inheritdoc />
