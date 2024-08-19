@@ -1,0 +1,9 @@
+.form{
+    width:400px;
+    margin: 10em auto;
+}
+
+.form label, .form input{
+    display: block;
+    margin-bottom: 10px;
+}
