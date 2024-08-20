@@ -66,3 +66,20 @@ This project is a comprehensive patient tracking system. It allows for the manag
 - **Schedule**: Stores appointment schedules.
 - **Users**: Stores user information.
 - **Roles**: Stores role information.
+
+
+
+
+## DevOps for the app
+- local testing to verify function
+  - spin up a db
+  - build and run the api (dotnet)
+    -create a unit test
+  - build and run the ui (react/next)
+- bundling/containerizing/packaging
+  - dockerfiles
+  - build images
+  - push inages to a remote host
+- build web apps/database on Azure
+- static analysis with Sonar
+- Build Automation

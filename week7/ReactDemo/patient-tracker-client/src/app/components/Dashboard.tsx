@@ -16,7 +16,7 @@ export const Dashboard = () => {
     useEffect(() => {
 
         //Call our backend here
-        fetch('http://localhost:5094/api/User/ListAllUsers', 
+        fetch('http://localhost:9999/api/User/ListAllUsers', 
             {
             method: 'GET',
             headers:{

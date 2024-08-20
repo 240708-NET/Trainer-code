@@ -21,7 +21,7 @@ const RegistrationForm = () => {
     function handleFormSubmission(event: FormEvent<HTMLFormElement>): void {
         
         event.preventDefault();
-        fetch('http://localhost:5094/api/User/CreateUser', {
+        fetch('http://localhost:9999/api/User/CreateUser', {
             method: 'POST',
             headers:{
                 'Content-Type':'application/json'
