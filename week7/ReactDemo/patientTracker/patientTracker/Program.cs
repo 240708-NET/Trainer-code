@@ -32,6 +32,8 @@ app.MapControllers();
     app.UseSwaggerUI();
   }
 
+app.MapGet("/", context => context.Response.WriteAsync("Hello World!"));
+
 //Handle CORS
 app.UseCors(options => options.AllowAnyHeader()
               .SetIsOriginAllowed(hostName => true)
