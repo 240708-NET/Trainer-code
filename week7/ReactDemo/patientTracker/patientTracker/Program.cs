@@ -5,6 +5,7 @@ using patientTracker.Data.Repositories;
 using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.WebHost.UseUrls("http://[::]:80");
 var connectionString = builder.Configuration["ConnectionString"];
 builder.Services.AddDbContext<PatientTrackerContext>(options =>
     options.UseSqlServer(connectionString));
