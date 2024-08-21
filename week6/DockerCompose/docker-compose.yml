@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   ui:
-    image: uidemo:latest
+    image: uidemo:latest # image uses the image it can pull, either locally or from the source you specify (if the image is already built)
     deploy:
       replicas: 1
       resources:
@@ -25,3 +25,22 @@ services:
         protocol: tcp
 
   api:
+    build: ./APIDemo # build tells compose to create a new image from the dockerfile/location specified, and use that new image for the container
+                     # the image it creates is names after the service it's creating as "dockercompose-{service}", in this case "dockercompose-api"
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 50M
+        reservations:
+          cpus: '0.1'
+          memory: 20M
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+    ports:
+      - target: 80
+        published: 7262
+        protocol: tcp
