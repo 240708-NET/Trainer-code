@@ -79,5 +79,5 @@ jobs:
       with:
         app-name: 'patienttracker-api'
         slot-name: 'production'
-        publish-profile: ${{ secret.AZURE_PUBLISH_PROFILE_API }}
+        publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_API }}
         images: 'index.docker.io/hawkinsr/patient-tracker-api:${{ github.sha }}'
