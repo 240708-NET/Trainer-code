@@ -1,9 +1,13 @@
 name: API Build and Deploy
 
+#triggers
 on:
   push:
+  #conditions
+    #limit to changes on these branches...
     branches:
       - main
+    #limit to changes in this folder...
     paths:
       - week7/ReactDemo/patientTracker/**
   pull_request:    
@@ -12,9 +16,12 @@ on:
     paths:
       - week7/ReactDemo/patientTracker/**
   workflow_dispatch:
-    
+
+#the tasks to complete
 jobs:
+  #each job will run on a new vm(build agent)
   build:
+    #what type of vm will this job be performed on
     runs-on: ubuntu-latest
 
     steps:
@@ -67,6 +74,7 @@ jobs:
         tags: hawkinsr/patient-tracker-api:${{ github.sha }} 
 
   deploy:
+    #this job needs to be finished before this one starts
     needs: dockerize
     runs-on: ubuntu-latest
 
