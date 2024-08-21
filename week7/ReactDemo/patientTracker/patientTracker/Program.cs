@@ -28,7 +28,7 @@ builder.Services.AddScoped<JWTService>();
 //Add swagger
 var app = builder.Build();
 app.MapControllers();
-// app.MapGet("/", context => context.Response.WriteAsync("Hello World!"));
+app.MapGet("/", context => context.Response.WriteAsync("Hello World!"));
 if (app.Environment.IsDevelopment())
   {
     app.UseSwagger();
