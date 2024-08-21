@@ -81,5 +81,7 @@ This project is a comprehensive patient tracking system. It allows for the manag
   - build images
   - push inages to a remote host
 - build web apps/database on Azure
+
+
 - static analysis with Sonar
 - Build Automation

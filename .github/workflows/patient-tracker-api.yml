@@ -1,0 +1,31 @@
+name: API Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - week7/ReactDemo/patientTracker/**
+  pull_request:    
+    branches:
+      - main
+    paths:
+      - week7/ReactDemo/patientTracker/**
+  workflow_dispatch:
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: build-sanity-check
+      run: echo "build sanity check"
+
+    
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: deploy-sanity-check
+      run: echo "deploy sanity check"
