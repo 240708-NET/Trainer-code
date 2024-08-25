@@ -5,6 +5,8 @@ using patientTracker.Data.Repositories;
 using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.WebHost.UseUrls("http://[::]:80");
+
 var connectionString = builder.Configuration["ConnectionString"];
 builder.Services.AddDbContext<PatientTrackerContext>(options =>
     options.UseSqlServer(connectionString));
@@ -26,13 +28,13 @@ builder.Services.AddScoped<JWTService>();
 //Add swagger
 var app = builder.Build();
 app.MapControllers();
-  if (app.Environment.IsDevelopment())
+app.MapGet("/", context => context.Response.WriteAsync("Hello World!"));
+if (app.Environment.IsDevelopment())
   {
     app.UseSwagger();
     app.UseSwaggerUI();
   }
 
-app.MapGet("/", context => context.Response.WriteAsync("Hello World!"));
 
 //Handle CORS
 app.UseCors(options => options.AllowAnyHeader()
